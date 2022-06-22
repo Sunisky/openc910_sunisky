@@ -325,7 +325,11 @@ module tb();
       $dumpfile("test.vcd");
       $dumpvars;  
     `else
-      $fsdbDumpvars();
+      //$fsdbDumpvars();
+      $fsdbDumpfile("tb.fsdb");
+      $fsdbDumpvars(0, tb);
+      $fsdbDumpMDA(0, tb);
+      //$fsdbDumpvars();
     `endif
   `endif
   end

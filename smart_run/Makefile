@@ -69,7 +69,7 @@ ifeq ($(DUMP), on)
 ifeq (${SIM}, verilator)
 SIM_DUMP := --trace
 else
-SIM_DUMP :=
+SIM_DUMP := 
 endif
 else
 ifeq (${SIM}, iverilog)
@@ -81,7 +81,7 @@ endif
 
 ifeq ($(SIM), vcs)
 TIMESCALE := -timescale=1ns/100fs
-SIMULATOR_OPT := -sverilog -full64 -kdb -lca -debug_access +nospecify +notimingchecks +lint=TFIPC-L
+SIMULATOR_OPT := -sverilog -full64 -kdb -lca -debug_access +nospecify +notimingchecks +lint=TFIPC-L -debug_all
 SIMULATOR_DEF := +define+no_warning +define+TSMC_NO_WARNING
 SIMULATOR_LOG := -l comp.vcs.log
 ifeq ($(UPF), on)
@@ -224,7 +224,7 @@ endif
 # verdi
 verdi:
 	@echo "  [THead-smart] smart now ... "
-	@cd ./work && verdi -sv -f ../logical/filelists/sim.fl -top tb -ssf tb.fsdb &
+	@cd ./work && verdi -sv -f ../logical/filelists/sim.fl -top tb -ssf tb.fsdb -ssv -ssy&
 
 # Execute all cases
 regress:

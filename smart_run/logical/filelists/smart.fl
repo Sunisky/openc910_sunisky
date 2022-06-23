@@ -14,48 +14,59 @@ limitations under the License.
 */
 +libext+.v+.h+.V+.sv+
 
-../logical/ahb/ahb.v
-../logical/ahb/ahb2apb.v
+-y ../logical/ahb
+-y ../logical/apb
+-y ../logical/axi
+# -y ../logical/bus
+# -y ../logical/clk
+-y ../logical/common
+-y ../logical/gpio
+-y ../logical/mem
+-y ../logical/uart
+-y ../logical/pmu
 
-../logical/apb/apb.v
-../logical/apb/apb_bridge.v
-
-../logical/axi/axi2ahb.v
-../logical/axi/axi_err128.v
-../logical/axi/axi_fifo.v
-../logical/axi/axi_fifo_entry.v
-../logical/axi/axi_interconnect128.v
-../logical/axi/axi_slave128.v
-
-../logical/common/BUFGCE.v
-../logical/common/clk_gen.v
-../logical/common/cpu_sub_system_axi.v
-../logical/common/err_gen.v
-../logical/common/fifo_counter.v
-../logical/common/fpga_clk_gen.v
-../logical/common/rv_integration_platform.v
-../logical/common/soc.v
-../logical/common/timer.v
-../logical/common/wid_entry.v
-../logical/common/wid_for_axi4.v
-
-../logical/gpio/gpio.v
-../logical/gpio/gpio_apbif.v
-../logical/gpio/gpio_ctrl.v
-
-../logical/mem/f_spsram_32768x128.v
-../logical/mem/f_spsram_large.v
-../logical/mem/mem_ctrl.v
-../logical/mem/ram.v
-
-../logical/uart/uart.v
-../logical/uart/uart_apb_reg.v
-../logical/uart/uart_baud_gen.v
-../logical/uart/uart_ctrl.v
-../logical/uart/uart_receive.v
-../logical/uart/uart_trans.v
-
-../logical/pmu/pmu.v
-../logical/pmu/px_had_sync.v
-../logical/pmu/sync.v
-../logical/pmu/tap2_sm.v
+//../logical/ahb/ahb.v
+//../logical/ahb/ahb2apb.v
+//
+//../logical/apb/apb.v
+//../logical/apb/apb_bridge.v
+//
+//../logical/axi/axi2ahb.v
+//../logical/axi/axi_err128.v
+//../logical/axi/axi_fifo.v
+//../logical/axi/axi_fifo_entry.v
+//../logical/axi/axi_interconnect128.v
+//../logical/axi/axi_slave128.v
+//
+//../logical/common/BUFGCE.v
+//../logical/common/clk_gen.v
+//../logical/common/cpu_sub_system_axi.v
+//../logical/common/err_gen.v
+//../logical/common/fifo_counter.v
+//../logical/common/fpga_clk_gen.v
+//../logical/common/rv_integration_platform.v
+//../logical/common/soc.v
+//../logical/common/timer.v
+//../logical/common/wid_entry.v
+//../logical/common/wid_for_axi4.v
+//
+//../logical/gpio/gpio.v
+//../logical/gpio/gpio_apbif.v
+//../logical/gpio/gpio_ctrl.v
+//
+//../logical/mem/f_spsram_32768x128.v
+//../logical/mem/f_spsram_large.v
+//../logical/mem/mem_ctrl.v
+//../logical/mem/ram.v
+//
+//../logical/uart/uart.v
+//../logical/uart/uart_apb_reg.v
+//../logical/uart/uart_baud_gen.v
+//../logical/uart/uart_ctrl.v
+//../logical/uart/uart_receive.v
+//../logical/uart/uart_trans.v
+//
+//../logical/pmu/pmu.v
+//../logical/pmu/px_had_sync.v
+//../logical/pmu/sync.v
+//../logical/pmu/tap2_sm.v
